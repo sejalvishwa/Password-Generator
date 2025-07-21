@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 flex flex-col items-center justify-center min-h-screen space-y-6">
+
+  <h1 class="text-5xl border border-gray-100 p-4 font-bold text-white drop-shadow-lg">Password Generator</h1>
+
+  <div
+    class="bg-white/20 backdrop-blur-lg border border-white/30 rounded-3xl p-8 shadow-2xl shadow-indigo-700/40 w-80 space-y-6 transform transition-transform duration-300 hover:scale-105">
+    
+    <div class="flex items-center justify-between space-x-2">
+      <h1 id="newPass" class="text-white font-light text-lg break-all">Your Password is...</h1>
+      <i class="fa-regular fa-copy text-white cursor-pointer hover:text-indigo-300 transition" id="copyBtn"></i>
+    </div>
+
+    <div class="space-y-2">
+      <input type="range" id="range" min="6" max="20" value="10" class="w-full accent-indigo-500">
+      <p id="rangeVal" class="text-center text-white">Length: 10</p>
+    </div>
+
+    <div class="space-y-2 text-white">
+      <label class="flex items-center space-x-2">
+        <input type="checkbox" id="uppercase" class="accent-indigo-500">
+        <span>Uppercase</span>
+      </label>
+      <label class="flex items-center space-x-2">
+        <input type="checkbox" id="lowercase" class="accent-indigo-500">
+        <span>Lowercase</span>
+      </label>
+      <label class="flex items-center space-x-2">
+        <input type="checkbox" id="number" class="accent-indigo-500">
+        <span>Number</span>
+      </label>
+      <label class="flex items-center space-x-2">
+        <input type="checkbox" id="symbol" class="accent-indigo-500">
+        <span>Symbol</span>
+      </label>
+    </div>
+
+    <button id="btnPass"
+      class="w-full bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-bold py-2 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+      Generate Password
+    </button>
+  </div>
+
+  <p class="text-white text-sm mt-4 italic">© 2025 • Made by Sejal Vishwakarma</p>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
